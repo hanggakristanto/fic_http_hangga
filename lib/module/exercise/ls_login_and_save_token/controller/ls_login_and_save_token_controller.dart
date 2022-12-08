@@ -22,6 +22,8 @@ class LsLoginAndSaveTokenController extends State<LsLoginAndSaveTokenView>
 
   String email = "admin@demo.com";
   String password = "123456";
+  // String email = "";
+  // String password = "";
 
   doLogin() async {
     showLoading();
@@ -92,7 +94,7 @@ class LsLoginAndSaveTokenController extends State<LsLoginAndSaveTokenView>
     print(AppSession.token);
     if (AppSession.token.isNotEmpty) {
       print("Login success!");
-      await showInfoDialog("Login success!");
+      await showInfoDialog('Login Sukses \n Token : ${AppSession.token}');
       Get.back();
     }
   }
